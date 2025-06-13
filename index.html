@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumen Media - Social Media Management Agency. We Edit, Post & Grow Your Brand." />
+  <meta name="keywords" content="Lumen Media, Social Media Management, Video Editing, Content Creation, Branding" />
+  <meta name="author" content="Lumen Media" />
+  <title>Lumen Media | Raw Clips in, Magic out</title>
+  <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <script defer src="javascript/main.js"></script>
+</head>
+<body>
+  <!-- Header/Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <!-- Logo Section -->
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <img src="assets/images/Agency Logo WS.png" alt="Lumen Media Logo" />
+          <h1 class="logo-text">Lumen Media</h1>
+        </a>
+      </div>
+
+      <!-- Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars" id="hamburger-icon" aria-label="Menu"></i>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" style="color: crimson;">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <div class="theme-toggle">
+          <label class="flat-switch">
+            <input type="checkbox" id="themeToggle" aria-label="Toggle dark mode">
+            <span class="flat-slider"></span>
+          </label>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-content">
+    <!-- Hero Section -->
+    <section class="hero" id="hero" style="background: url('assets/Thumbnail/Main Background.png') no-repeat center center / cover;">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1 class="animated-heading">"Raw Clips in, Magic Out"</h1>
+          <p class="animated-subheading">Your brand’s visual storyteller</p>
+          <a href="services.html" class="cta-btn">Explore Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about">
+      <div class="container section-flex">
+        <div class="text-block">
+          <h2>About Me</h2>
+          <p>I'm a creative storyteller passionate about helping brands shine through captivating video edits and compelling content strategies.</p>
+          <a href="about.html" class="btn">Learn More</a>
+        </div>
+        <div class="image-block">
+          <img src="assets/images/WhatsApp Image 2025-06-01 at 22.57.08_e60596bb.jpg" alt="Profile Picture" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio">
+      <div class="container section-flex reverse">
+        <div class="text-block">
+          <h2>Portfolio</h2>
+          <p>Discover our recent projects that showcase how we’ve helped clients elevate their online presence.</p>
+          <a href="portfolio.html" class="btn">View Portfolio</a>
+        </div>
+        <div class="video-block">
+          <video src="assets/Thumbnail/Potfolio.mp4" autoplay muted loop playsinline></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services">
+      <div class="container section-flex">
+        <div class="text-block">
+          <h2>Our Services</h2>
+          <p>We create, plan, and schedule content to grow your brand and engage your audience consistently.</p>
+          <a href="services.html" class="btn">Explore Services</a>
+        </div>
+        <div class="video-block">
+          <video src="assets/Thumbnail/Video Creation.mp4" autoplay muted loop playsinline></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools">
+      <div class="container">
+        <h3 class="section-title">Tools We Use</h3>
+        <div class="tool-icons">
+          <img src="assets/images/Adobe Premier Pro.png" alt="Premiere Pro" title="Adobe Premiere Pro" />
+          <img src="assets/images/Adobe After Effects.png" alt="After Effects" title="Adobe After Effects" />
+          <img src="assets/images/Da Vinci Resolve.png" alt="Da Vinci Resolve" title="Da Vinci Resolve" />
+          <img src="assets/images/Capcut.png" alt="CapCut" title="CapCut" />
+          <img src="assets/images/Adobe Ilustrator.png" alt="Illustrator" title="Adobe Illustrator" />
+          <img src="assets/images/Adobe Photoshop.png" alt="Photoshop" title="Adobe Photoshop" />
+          <img src="assets/images/Canva.png" alt="Canva" title="Canva" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Section -->
+    <div id="video-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <iframe id="video-frame" src="" frameborder="0" allowfullscreen title="Video Preview"></iframe>
+      </div>
+    </div>
+  </main>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container footer-content">
+      <div class="box">
+        <h1>Lumen Media</h1>
+        <p>Empowering brands through social storytelling and video content.</p>
+      </div>
+      <div class="box">
+        <h2 class="quick">Quick Links</h2>
+        <ul class="q-link">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Gallery</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="box">
+        <h2 class="social">Social Media</h2>
+        <ul class="s-link">
+          <li><a href="https://www.instagram.com/lumenmediain?igsh=MTN3MW4wa2x6eTJ5Zg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://www.facebook.com/share/1C3VLKifU3/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://youtube.com/@lumenmediain?si=fjwJMD-Zh1L1CS71" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://snapchat.com/t/VlnCwZpZ" target="_blank" aria-label="Snapchat"><i class="fab fa-snapchat"></i> Snapchat</a></li>
+          <li><a href="https://www.tiktok.com/@lumenmediaedits?_t=ZM-8wqI06nHPrs&_r=1" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i> TikTok</a></li>
+          <li><a href="https://wa.me/919700991005" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+        </ul>
+      </div>
+
+      <!-- Professional Platforms -->
+      <div class="box">
+        <h2 class="social">Professional Platforms</h2>
+        <ul class="s-link">
+          <li><a href="https://www.linkedin.com/in/amritpal-sohal-20978425b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://www.upwork.com/freelancers/~01002eda35732702cf" target="_blank" aria-label="Upwork"><i class="fas fa-briefcase"></i> Upwork</a></li>
+          <li><a href="https://www.fiverr.com/s/vvepAVZ" target="_blank" aria-label="Fiverr"><i class="fas fa-handshake"></i> Fiverr</a></li>
+          <li><a href="https://www.behance.net/amritpalsohal1" target="_blank" aria-label="Behance"><i class="fab fa-behance"></i> Behance</a></li>
+          <li><a href="https://dribbble.com/amritpalsingh25" target="_blank" aria-label="Dribbble"><i class="fab fa-dribbble"></i> Dribbble</a></li>
+          <li><a href="https://www.freelancer.com/u/amritpalsohal?sb=t" target="_blank" aria-label="Freelancer"><i class="fas fa-user-tie"></i> Freelancer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Lumen Media. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
