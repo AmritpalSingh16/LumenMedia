@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse our video projects from Reels, Shorts, and Corporate campaigns.">
+  <title>Portfolio | Lumen Media</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+  <script defer src="javascript/main.js"></script>
+</head>
+<body>
+
+  <!-- Header/Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <!-- Logo Section -->
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <img src="assets/images/Agency Logo WS.png" alt="Lumen Media Logo" />
+          <h1 class="logo-text">Lumen Media</h1>
+        </a>
+      </div>
+
+      <!-- Hamburger Icon (Visible on Mobile) -->
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars" id="hamburger-icon"></i>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html" style="color: crimson;">Portfolio</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <div class="theme-toggle">
+          <label class="flat-switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="flat-slider"></span>
+          </label>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Portfolio Section -->
+  <main class="portfolio">
+    <section id="portfolio" class="container portfolio-intro">
+      <h1>Our Work</h1>
+      <p>Explore our curated selection of video projects—headshot videos and viral social media edits.</p>
+
+      <div class="filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="headshot">Headshot Videos</button>
+        <button class="filter-btn" data-category="clips">Viral Clip Editing</button>
+        <button class="filter-btn" data-category="real estate">Real Estate</button>
+        <button class="filter-btn" data-category="Business">Business Videos</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Headshot Video Projects -->
+        <div class="portfolio-item" data-category="headshot">
+          <img src="assets/Thumbnail/Modern Daily Podcast YouTube Thumbnail.png" alt="Headshot 1">
+          <div class="overlay" data-video="https://mypjnacademylearncom.wordpress.com/wp-content/uploads/2025/06/wp-1749918759879.mp4" data-caption="Headshot Video 1: Scripted & edited video that helped client boost leads by 84%. Includes B-roll and engagement captions."></div>
+        </div>
+        <div class="portfolio-item" data-category="headshot">
+          <img src="assets/Thumbnail/Modern Daily Podcast YouTube Thumbnail(1).png" alt="Headshot 2">
+          <div class="overlay" data-video="https://mypjnacademylearncom.wordpress.com/wp-content/uploads/2025/06/wp-1749918760059.mp4" data-caption="Headshot Video 2: High-converting video for sales funnel. Captioned, styled, and managed posting strategy."></div>
+        </div>
+
+        <!-- Real Estate Projects -->
+        <div class="portfolio-item" data-category="real estate">
+          <img src="assets/Thumbnail/real estate.png" alt="Real Estate 1">
+          <div class="overlay" data-video="https://mypjnacademylearncom.wordpress.com/wp-content/uploads/2025/06/wp-1749920470057.mp4" data-caption="Real Estate Video 1: Capturing every angle to craft the story of your property. Showcasing the acres in seconds."></div>
+        </div>
+
+        <!-- Business Videos-->
+         <div class="portfolio-item" data-category="Business">
+          <img src="assets/Thumbnail/Business Thumbnail1.png" alt="Business Video 1">
+          <div class="overlay" data-video="https://mypjnacademylearncom.wordpress.com/wp-content/uploads/2025/06/wp-1749920469925.mp4" data-caption="Business Video 1: Give your business a chance to grow with high quality hook videos. Moving towards perfection."></div>
+        </div>
+
+        <!-- Viral Clip Editing Projects -->
+        <div class="portfolio-item" data-category="clips">
+          <img src="assets/Thumbnail/Modern Daily Podcast YouTube Thumbnail(3).png" alt="Clip 1">
+          <div class="overlay" data-video="https://mypjnacademylearncom.wordpress.com/wp-content/uploads/2025/06/wp-1749834316303.mp4" data-caption="Viral Clip 1: From long-form interview to short-form video with 100K+ views. Eye-catching motion graphics."></div>
+        </div>
+        <div class="portfolio-item" data-category="clips">
+          <img src="assets/Thumbnail/Modern Daily Podcast YouTube Thumbnail(4).png" alt="Clip 2">
+          <div class="overlay" data-video="https://mypjnacademylearncom.wordpress.com/wp-content/uploads/2025/06/wp-1749918759549.mp4" data-caption="Viral Clip 2: 70K+ views on a new account. Optimized pacing, visuals, and CTAs for virality."></div>
+        </div>
+        <div class="portfolio-item" data-category="clips">
+          <img src="assets/Thumbnail/Modern Daily Podcast YouTube Thumbnail(5).png" alt="Clip 3">
+          <div class="overlay" data-video="https://mypjnacademylearncom.wordpress.com/wp-content/uploads/2025/06/wp-1749918759662.mp4" data-caption="Viral Clip 3: Branded short for personal brand growth. Customized style and subtitles."></div>
+        </div>
+        <div class="portfolio-item" data-category="clips">
+          <img src="assets/Thumbnail/Modern Daily Podcast YouTube Thumbnail(6).png" alt="Clip 4">
+          <div class="overlay" data-video="https://mypjnacademylearncom.wordpress.com/wp-content/uploads/2025/06/wp-1749918759772.mp4" data-caption="Viral Clip 4: High-retention edit with strategic hook and humor. 60K+ views."></div>
+        </div>
+        <div class="portfolio-item" data-category="clips">
+          <img src="assets/Thumbnail/Clipping Thumbnail5.png" alt="Clip 5">
+          <div class="overlay" data-video="https://mypjnacademylearncom.wordpress.com/wp-content/uploads/2025/06/wp-1749834524073.mp4" data-caption="Viral Clip 5: Perfect sound and professional video animation. Let us edit one for you."></div>
+        </div>
+        <div class="portfolio-item" data-category="clips">
+          <img src="assets/Thumbnail/clipping Thumbnail6.png" alt="Clip 6">
+          <div class="overlay" data-video="https://mypjnacademylearncom.wordpress.com/wp-content/uploads/2025/06/wp-1749920469756.mp4" data-caption="Viral Clip 5: Conveying the messages thoughtfully. Working for views not brainless animations."></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div class="video-modal" id="videoModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <video id="modalVideo" controls></video>
+      <p id="videoCaption"></p>
+    </div>
+  </div>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container footer-content">
+      <div class="box">
+        <h1>Lumen Media</h1>
+        <p>Empowering brands through social storytelling and video content.</p>
+      </div>
+      <div class="box">
+        <h2 class="quick">Quick Links</h2>
+        <ul class="q-link">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Gallery</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <h2 class="social">Social Media</h2>
+        <ul class="s-link">
+          <li><a href="https://www.instagram.com/lumenmediain?igsh=MTN3MW4wa2x6eTJ5Zg==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://www.facebook.com/share/1C3VLKifU3/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://youtube.com/@lumenmediain?si=fjwJMD-Zh1L1CS71" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://snapchat.com/t/VlnCwZpZ" target="_blank"><i class="fab fa-snapchat"></i> Snapchat</a></li>
+          <li><a href="https://www.tiktok.com/@lumenmediaedits?_t=ZM-8wqI06nHPrs&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+          <li><a href="wa.me/+919700991005" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <h2 class="social">Professional Platforms</h2>
+        <ul class="s-link">
+          <li><a href="https://www.linkedin.com/in/amritpal-sohal-20978425b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://www.upwork.com/freelancers/~01002eda35732702cf?mp_source=share" target="_blank"><i class="fas fa-briefcase"></i> Upwork</a></li>
+          <li><a href="https://www.fiverr.com/s/vvepAVZ" target="_blank"><i class="fas fa-handshake"></i> Fiverr</a></li>
+          <li><a href="https://www.behance.net/amritpalsohal1" target="_blank"><i class="fab fa-behance"></i> Behance</a></li>
+          <li><a href="https://dribbble.com/amritpalsingh25" target="_blank"><i class="fab fa-dribbble"></i> Dribbble</a></li>
+          <li><a href="https://www.freelancer.com/u/amritpalsohal?sb=t" target="_blank"><i class="fas fa-user-tie"></i> Freelancer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Lumen Media. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

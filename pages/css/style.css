@@ -1,0 +1,942 @@
+.page-content {
+  margin-top: 60px; /* Adjust if your navbar height + top gap is different */
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body.scrolled .navbar {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+body {
+  padding-top: 100px; /* Add this if navbar height + top gap = ~100px */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: white; /* ✅ Correct */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+/* Floating Navbar Style */
+.navbar {
+  position: fixed; /* <-- WAS: absolute */
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1200px;
+  background: rgba(247, 245, 245, 0.985);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  padding: 16px 30px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* removes underline */
+  color: black; /* ensures text stays black */
+}
+
+.logo-link:hover {
+  text-decoration: none;
+  color: black; /* prevents color change */
+}
+
+.logo-link img {
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 2rem; /* adjust as needed */
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #2685a4;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar {
+  background: rgba(247, 245, 245, 0.985);
+  /* fallback for unsupported browsers */
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+
+.nav-links a:hover {
+  color: #186078;
+}
+
+/* Container */
+/* Navigation layout */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Toggle Switch Styling */
+.flat-switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 18px;
+}
+
+.flat-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.flat-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #666;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.flat-slider::before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  top: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.flat-switch input:checked + .flat-slider {
+  background-color: #2685a4;
+}
+
+.flat-switch input:checked + .flat-slider::before {
+  transform: translateX(18px);
+}
+
+/* Optional spacing */
+.theme-toggle {
+  margin-left: 10px;
+}
+
+
+/* Animation */
+/* Animation Base */
+.animated-heading,
+.animated-subheading {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1.5s ease-out forwards;
+  text-align: center;
+}
+
+/* Desktop Defaults */
+.animated-heading {
+  font-size: 4.5rem; /* Bigger size for desktop */
+  animation-delay: 0.3s;
+  color: #fbf9f9;
+}
+
+.animated-subheading {
+  font-size: 2rem;
+  animation-delay: 0.8s;
+  color: rgba(255, 255, 255, 0.998);
+}
+
+/* Keyframe for Fade Up */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .animated-heading {
+    font-size: 3rem;
+  }
+
+  .animated-subheading {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .animated-heading {
+    font-size: 2rem;
+  }
+
+  .animated-subheading {
+    font-size: 1.1rem;
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url('assets/Thumbnail/real estate.png') no-repeat center center / cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background:#2685a4 ;
+  color: #f8f6f6;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #186078;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #2685a4;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Filter Buttons */
+.filter-btn {
+  background-color: #0f0f0f;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  margin: 0 5px 20px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #0f0f0f;
+}
+/* image setting */
+.section {
+  padding: 80px 20px;
+  color: rgb(11, 11, 11); /* Adjust text color for readability */
+  background:rgb(11, 11, 11); /* Replace with actual path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: large;
+}
+
+/* Optional: Overlay for better contrast */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgb(243, 238, 235); /* Adjust opacity as needed */
+  z-index: -1;
+}
+
+
+.section-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.section-flex.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-block {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.image-block {
+  flex: 1 1 45%;
+  min-width: 300px;
+  text-align: center;
+}
+
+.image-block img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.video-block {
+  flex: 1 1 45%;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-block video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #2685a4;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #186078;
+}
+
+.centered-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+/* Tools */
+.tools {
+  padding: 60px 0;
+  background: #f1f1f1;
+  font-size: 0;
+}
+
+.section-title {
+  font-size: x-large;
+  color: black; /* standard color for light theme */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dark theme adjustment */
+body.dark-theme .section-title {
+  color: white;
+}
+
+.tool-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.tool-icons img {
+  width: 50px;
+  transition: transform 0.3s;
+}
+
+.tool-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('background.jpg') no-repeat center center/cover;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+    filter: brightness(1.2);
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* LESS dark */
+  z-index: 0;
+}
+
+.modal-content {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  max-width: 800px;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 450px;
+}
+
+#videoCaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+.close-btn,
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-size: 12px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: left;
+}
+
+.footer .box {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer .box h1,
+.footer .box h2 {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer .box p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer .box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .box ul li {
+  margin-bottom: 10px;
+}
+
+.footer .box ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer .box ul li a:hover {
+  color: #fff;
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #888;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+/* Keep existing styles */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: left;
+}
+
+/* Add this at the end of your CSS */
+@media (max-width: 768px) {
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    gap: 20px;
+  }
+
+  .footer .box {
+    min-width: unset;
+  }
+
+  .footer {
+    padding: 40px 10px 20px;
+  }
+
+  .footer .box h1,
+  .footer .box h2 {
+    font-size: 14px;
+  }
+
+  .footer .box ul li {
+    font-size: 12px;
+  }
+
+  .footer .box p {
+    font-size: 12px;
+  }
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+body.dark-theme .navbar,
+body.dark-theme .services,
+body.dark-theme .projects,
+body.dark-theme .tools {
+  background-color: #2a2a2a;
+}
+
+body.dark-theme .nav-links a {
+  color: #f1f1f1;
+}
+
+body.dark-theme .nav-links a:hover {
+  color: #151616;
+}
+
+body.dark-theme .service-card,
+body.dark-theme .modal-content {
+  background: #040404;
+  color: #f1f1f1;
+}
+
+body.dark-theme .filter-btn {
+  background-color: #0b0b0b;
+}
+
+body.dark-theme .filter-btn.active,
+body.dark-theme .filter-btn:hover {
+  background-color: #151515;
+}
+
+body.dark-theme .footer {
+  background: #111;
+  color: #bbb;
+}
+
+/* Section overlay contrast for dark theme */
+body.dark-theme .section::before {
+  background: rgb(7, 7, 7); /* darker overlay for readability */
+}
+
+/* Ensure text remains readable */
+body.dark-theme .text-block,
+body.dark-theme .video-block {
+  color: #f1f1f1;
+}
+
+/* Buttons in dark mode */
+body.dark-theme .btn {
+  background-color: #e91e63;
+  color: #fff;
+}
+
+body.dark-theme .btn:hover {
+  background-color: #c2185b;
+}
+
+/* Image and video block shadows and blending */
+body.dark-theme .image-block img,
+body.dark-theme .video-block video {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Optional: blur section background image for dark mode readability */
+body.dark-theme .section {
+  backdrop-filter: blur(2px);
+}
+
+/* === Dark Theme for Portfolio Page === */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+body.dark-theme .portfolio-intro {
+  background: linear-gradient(135deg, #2e2e2e, #3b3b3b);
+  color: #f1f1f1;
+}
+
+body.dark-theme .portfolio-intro h1 {
+  color: #2685a4;
+}
+
+body.dark-theme .portfolio-intro p {
+  color: #ccc;
+}
+
+body.dark-theme .filter-btn {
+  background-color: transparent;
+  color: #ccc;
+  border-color: #2685a4;
+}
+
+body.dark-theme .filter-btn.active,
+body.dark-theme .filter-btn:hover {
+  background-color: #2685a4;
+  color: #fff;
+}
+
+body.dark-theme .portfolio-item {
+  background-color: #2a2a2a;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: #f1f1f1;
+}
+
+body.dark-theme .modal-content {
+  background: #111;
+  color: #f1f1f1;
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .close-btn {
+  color: #fff;
+}
+
+body.dark-theme .close-btn:hover {
+  color: #6c8eff;
+}
+
+body.dark-theme .theme-toggle .flat-slider {
+  background-color: #444;
+}
+
+body.dark-theme .theme-toggle input:checked + .flat-slider {
+  background-color: #2685a4;
+}
+
+body.dark-theme .theme-toggle input:checked + .flat-slider::before {
+  background-color: #fff;
+}
+
+body, .portfolio-intro, .portfolio-item, .modal-content {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+body.dark-theme .nav-links a,
+body.dark-theme .footer a,
+body.dark-theme .q-link a,
+body.dark-theme .s-link a {
+  color: #f1f1f1;
+}
+body.dark-theme .s-link a:hover {
+  color: #2685a4; /* or another accent color */
+}
+
+body.dark-theme .footer a:hover {
+  color: #fff;
+}
+
+body.dark-theme .mission-box h2,
+body.dark-theme blockquote h2 {
+  color: #f9f9f9;
+}
+
+body,
+h1, h2, h3, p, span, a, .stat span, .stat p {
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+
+
+
+/* about*/
+body.dark-theme {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+
+/* About Section */
+body.dark-theme .about-hero {
+  background: #1a1a1a;
+}
+body.dark-theme .about-text,
+body.dark-theme .mission-box {
+  background-color: transparent;
+  color: #e0e0e0;
+}
+body.dark-theme .mission-box {
+  background-color: #373232;
+  color: #e0e0e0;
+  border: 1px solid #373232;
+}
+
+/* Personal Story */
+body.dark-theme .personal-story {
+  background-color: #181818;
+  color: #ddd;
+}
+
+/* Stats Section */
+body.dark-theme .stats-section {
+  background-color: #222;
+}
+body.dark-theme .stat span {
+  color: #2685a4;
+}
+body.dark-theme .stat p {
+  color: #ccc;
+}
+
+body,
+.navbar,
+.about-hero,
+.personal-story,
+.stats-section,
+.footer {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Base Navbar Flex */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    color: #0d0a4e;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #111;
+    padding: 20px;
+    width: 200px;
+    border-radius: 0 0 0 10px;
+    z-index: 99;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: white;
+    padding: 10px 0;
+  }
+}
+.hamburger i {
+  transition: transform 0.3s ease;
+}
+
+.nav-links.active ~ .hamburger i {
+  transform: rotate(90deg);
+}
+/* Hide logo text on small screens */
+@media (max-width: 768px) {
+  .logo-text {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
